@@ -1,0 +1,56 @@
+<div class="container " style="margin-top: 10px;">
+    <div class="btn-group">
+<button  class="btn btn-primary" (click)="guardarCliente()">Guardar Cliente</button>
+<!--<button class="btn btn-danger" (click)="leerClientes()">Leer Cliente</button>
+<button class="btn btn-danger" (click)="leerClientes()">Eliminar Productos</button>-->
+<button class="btn btn-danger" (click)="eliminarClientes()">Elimianr Clientes</button>
+<button class="btn btn-danger" (click)="eliminarTodos()">Eliminar todos</button>
+</div>
+</div>
+<div class="container">
+    <table class="table" style="margin-top: 10px;">
+        <thead class="thead-dark">
+          <tr>
+            
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Edad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientesLocales">
+            
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.apellido}}</td>
+            <td>{{cliente.edad}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
+
+</div>
+
+<div class="container">
+    <table class="table" style="margin-top: 10px;">
+        <thead class="thead-dark">
+          <tr>
+            
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of productosLocales">
+            
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}</td>
+        
+          </tr>
+        </tbody>
+      </table>
+      
+      
+
+</div>
